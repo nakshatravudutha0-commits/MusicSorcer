@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        AI Gesture Music Controller
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+    <header>
+
+        <h1>
+            🎵 AI Gesture Music Controller
+        </h1>
+
+        <p>
+            Control your computer music with your hands
+        </p>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- CAMERA -->
+
+        <section class="camera-section">
+
+            <div class="camera-container">
+
+                <video
+                    id="webcam"
+                    autoplay
+                    playsinline
+                    muted>
+                </video>
+
+                <canvas
+                    id="canvas">
+                </canvas>
+
+                <div id="camera-message">
+                    Camera is not started
+                </div>
+
+            </div>
+
+
+            <button id="startButton">
+                📷 Start Controller
+            </button>
+
+
+            <p id="status">
+                Start the controller and allow camera access.
+            </p>
+
+        </section>
+
+
+
+        <!-- MUSIC -->
+
+        <section class="music-section">
+
+            <h2>
+                🎶 Music Source
+            </h2>
+
+
+            <div class="source-buttons">
+
+                <button
+                    id="youtubeButton"
+                    class="source-button active">
+
+                    ▶️ YouTube
+
+                </button>
+
+
+                <button
+                    id="spotifyButton"
+                    class="source-button">
+
+                    🎵 Spotify
+
+                </button>
+
+            </div>
+
+
+            <div id="youtubeSection">
+
+                <h3>
+                    YouTube
+                </h3>
+
+                <p>
+                    Play YouTube normally in your browser.
+                    Your hand gestures will control it.
+                </p>
+
+            </div>
+
+
+            <div
+                id="spotifySection"
+                style="display:none;">
+
+                <h3>
+                    Spotify
+                </h3>
+
+                <p>
+                    Play Spotify normally on your computer.
+                    Your hand gestures will control it.
+                </p>
+
+            </div>
+
+
+            <div class="now-playing">
+
+                <span>
+                    Control Mode:
+                </span>
+
+                <strong id="trackName">
+
+                    Computer Music
+
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- GESTURES -->
+
+        <section class="gesture-section">
+
+            <h2>
+                🖐️ Gesture Controls
+            </h2>
+
+
+            <div class="gesture-grid">
+
+
+                <div class="gesture-card">
+
+                    <span>✋</span>
+
+                    <h3>
+                        Palm
+                    </h3>
+
+                    <p>
+                        Play / Pause
+                    </p>
+
+                </div>
+
+
+                <div class="gesture-card">
+
+                    <span>✊</span>
+
+                    <h3>
+                        Fist
+                    </h3>
+
+                    <p>
+                        Mute / Unmute
+                    </p>
+
+                </div>
+
+
+                <div class="gesture-card">
+
+                    <span>👍</span>
+
+                    <h3>
+                        Thumb Up
+                    </h3>
+
+                    <p>
+                        Volume Up
+                    </p>
+
+                </div>
+
+
+                <div class="gesture-card">
+
+                    <span>👎</span>
+
+                    <h3>
+                        Thumb Down
+                    </h3>
+
+                    <p>
+                        Volume Down
+                    </p>
+
+                </div>
+
+
+                <div class="gesture-card">
+
+                    <span>👉</span>
+
+                    <h3>
+                        Swipe Right
+                    </h3>
+
+                    <p>
+                        Next Track
+                    </p>
+
+                </div>
+
+
+                <div class="gesture-card">
+
+                    <span>👈</span>
+
+                    <h3>
+                        Swipe Left
+                    </h3>
+
+                    <p>
+                        Previous Track
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- DETECTION -->
+
+        <section class="detected-section">
+
+            <h2>
+                🤖 Detection
+            </h2>
+
+
+            <div class="detection-box">
+
+                <p>
+
+                    Gesture:
+
+                    <strong id="gesture">
+                        —
+                    </strong>
+
+                </p>
+
+
+                <p>
+
+                    Action:
+
+                    <strong id="action">
+                        —
+                    </strong>
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            AI Gesture Music Controller
+            • MediaPipe • Python • Flask • PyAutoGUI
+        </p>
+
+    </footer>
+
+
+</div>
+
+
+<script
+    type="module"
+    src="app.js">
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #111827, #1e293b);
+    color: white;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 0;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+section {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.camera-section {
+    text-align: center;
+}
+
+.camera-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    aspect-ratio: 16 / 9;
+    background: black;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#webcam {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+#canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(-1);
+}
+
+#camera-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.2rem;
+}
+
+#startButton {
+    margin-top: 20px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background: white;
+    color: #111827;
+}
+
+#startButton:hover {
+    transform: scale(1.05);
+}
+
+#status {
+    margin-top: 15px;
+    color: #cbd5e1;
+}
+
+.music-section {
+    text-align: center;
+}
+
+#musicFile {
+    margin-bottom: 20px;
+}
+
+#audioPlayer {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.now-playing {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.now-playing span {
+    color: #cbd5e1;
+}
+
+.gesture-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gesture-card {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 15px;
+}
+
+.gesture-card span {
+    font-size: 2.5rem;
+}
+
+.gesture-card h3 {
+    margin: 10px 0 5px;
+}
+
+.gesture-card p {
+    color: #cbd5e1;
+}
+
+.detection-box {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.detection-box p {
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+#gesture,
+#action {
+    margin-left: 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #94a3b8;
+}
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .gesture-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .gesture-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
